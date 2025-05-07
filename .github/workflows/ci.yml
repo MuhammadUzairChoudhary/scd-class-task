@@ -4,7 +4,10 @@ jobs:
   job_1:
     runs-on: ubuntu-22.04
     steps:
-    - name: steps
-      run: |
-        npm init
-        node app.js
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Node commands
+        run: |
+          npm init -y
+          node app.js
