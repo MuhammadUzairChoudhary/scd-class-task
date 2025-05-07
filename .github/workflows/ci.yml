@@ -1,7 +1,5 @@
-on:
-  push:
-    branches:
-    - master
+name: actions_practice
+on: push
 jobs:
   job_1:
     runs-on: ubuntu-22.04
@@ -9,5 +7,4 @@ jobs:
     - name: steps
       run: |
         npm init
-        npm install
         node app.js
