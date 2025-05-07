@@ -7,4 +7,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - name: steps
-      run: npm init | node app.js
+      run: |
+        npm init
+        npm install
+        node app.js
