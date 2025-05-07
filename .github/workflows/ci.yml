@@ -1,13 +1,13 @@
-on:
-  push:
-    branches:
-    - master
+name: actions_practice
+on: push
 jobs:
   job_1:
-    name: install node
     runs-on: ubuntu-22.04
     steps:
-    - name: steps
-      run: | 
-        npm install
-        node app.js
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Node commands
+        run: |
+          npm init -y
+          node app.js
