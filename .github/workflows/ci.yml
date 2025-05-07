@@ -1,1 +1,13 @@
-
+on:
+  push:
+    branches:
+    - master
+jobs:
+  job_1:
+    name: install node
+    runs-on: ubuntu-22.04
+    steps:
+    - name: steps
+      run: | 
+        npm install
+        node app.js
